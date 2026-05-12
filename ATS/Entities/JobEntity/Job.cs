@@ -1,9 +1,8 @@
-﻿using ApplicationTrackingSystem.Entities.ApplicationEntity;
-using ApplicationTrackingSystem.Entities.Base;
+﻿using ATS.Entities.ApplicationEntity;
 using ATS.Entities.Base;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace ApplicationTrackingSystem.Entities.JobEntity
+namespace ATS.Entities.JobEntity
 {
     public class Job : BaseEntity
     {
@@ -11,7 +10,7 @@ namespace ApplicationTrackingSystem.Entities.JobEntity
         public string Description { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public JobStatus Status { get; set; }
-        public ICollection<Application> Applications { get; set; } = new List<Application> { };
+        public ICollection<ApplicationEntity.Application> Applications { get; set; } = new List<ApplicationEntity.Application> { };
 
     }
 }

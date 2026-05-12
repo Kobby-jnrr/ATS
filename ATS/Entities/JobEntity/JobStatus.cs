@@ -1,4 +1,4 @@
-﻿namespace ApplicationTrackingSystem.Entities.JobEntity;
+﻿namespace ATS.Entities.JobEntity;
 
 public enum JobStatus
 {
