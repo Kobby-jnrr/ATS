@@ -1,18 +1,29 @@
 ﻿using ATS.Entities.ApplicationEntity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ATS.DTOs.ApplicationDTOs;
 
 public record UpdateApplicationDTO
 (
-    int Id,
-    int JobId,
-    string CandidateName,
-    string CandidateEmail,
+    [Required] int Id,
+
+    [Required] int JobId,
+
+    [Required] string CandidateName,
+
+    [Required, EmailAddress] string CandidateEmail,
+
     ApplicationStage Stage,
-    int? CultureFitScore = null,
+
+    [Range(1, 5)] int? CultureFitScore = null,
+
     string? CultureFitComment = null,
-    int? InterviewScore = null,
+
+    [Range(1, 5)] int? InterviewScore = null,
+
     string? InterviewComment = null,
-    int? AssessmentScore = null,
+
+    [Range(1, 5)] int? AssessmentScore = null,
+
     string? AssesmentComment = null
 );
