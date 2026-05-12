@@ -1,4 +1,5 @@
-﻿using ATS.Entities.JobEntity;
+﻿using ATS.DTOs.ApplicationDTOs;
+using ATS.Entities.JobEntity;
 
 namespace ATS.DTOs.JobDTOs;
 
@@ -8,5 +9,6 @@ public record JobDetailsDTO
     string Title,
     string Description,
     string Location,
-    JobStatus Status
+    JobStatus Status,
+    IEnumerable<ApplicationDetailsDTO> Applications
 );

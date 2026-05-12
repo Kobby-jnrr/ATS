@@ -30,13 +30,13 @@ public static class JobMapping
 
     public static JobDetailsDTO ToJobDetailsDTO(this Job job)
     {
-        return new JobDetailsDTO
-            (
-                job.Id, 
-                job.Title, 
-                job.Description, 
-                job.Location, 
-                job.Status
-            );
+        return new JobDetailsDTO(
+            job.Id,
+            job.Title,
+            job.Description,
+            job.Location,
+            job.Status,
+            job.Applications.Select(a => a.ToApplicationDetailsDTO()) // Map the list
+        );
     }
 }

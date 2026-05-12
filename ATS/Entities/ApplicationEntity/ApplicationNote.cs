@@ -4,6 +4,7 @@ namespace ATS.Entities.ApplicationEntity
 {
     public class ApplicationNote : BaseEntity
     {
+        public int ApplicationId { get; set; }
         public ApplicationNoteType Type { get; set; }
         public string Description { get; set; } = string.Empty;
         public int CreatedByTeamMemberId { get; set; }
