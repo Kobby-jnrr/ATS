@@ -36,7 +36,7 @@ public static class JobMapping
             job.Description,
             job.Location,
             job.Status,
-            job.Applications.Select(a => a.ToApplicationDetailsDTO()) // Map the list
+            job.Applications.Select(a => a.ToApplicationDetailsDTO())
         );
     }
 }
